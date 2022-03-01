@@ -6,9 +6,11 @@ import PageContainer from "../src/components/PageContainer";
 import ServiceCard from "../src/components/ServiceCard";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
+// ssr api call
+import { getHello } from "./api/hello";
 
 const Home = ({ data }) => {
-  //console.log(data);
+  console.log(data.pbs);
 
   return (
     <>
@@ -161,11 +163,15 @@ const Home = ({ data }) => {
 };
 
 // This gets called on every request
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   // Fetch data from external API
-  const res = await fetch(`https://tam11a.netlify.app/api/hello`);
-  const data = await res.json();
-
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/hello`);
+  // const data = await res.json();
+  console.log(process.env.NEXT_PUBLIC_SITE_URL);
+  const data = {
+    name: "Tam",
+    pbs: process.env.NEXT_PUBLIC_SITE_URL || "hello World",
+  }; //await getHello();
   // Pass data to the page via props
   return { props: { data } };
 }
