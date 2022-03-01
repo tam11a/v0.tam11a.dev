@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#401B60" />
         <meta name="description" content="Portfolio of Ibrahim Sadik Tamim." />
         <link rel="icon" href="/favicon.svg" />

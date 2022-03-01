@@ -32,7 +32,7 @@ const Home = () => {
           <Typography variant="h3">
             Hi! I&#39;m{" "}
             <Typography variant={"span"} sx={{ color: "primary.main" }}>
-              {data.name}
+              Tam
             </Typography>
             .
           </Typography>
