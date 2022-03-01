@@ -90,7 +90,7 @@ const Footer = () => {
                 <RiChatSmile3Line />
               </IconButton>
               <Typography variant={"h6"}>
-                Thanks for Scrolling. That's All Folks.
+                Thanks for Scrolling. That&#39;s All Folks.
               </Typography>
               <Stack direction={"row"}>
                 <IconButton
