@@ -7,8 +7,9 @@ import ServiceCard from "../src/components/ServiceCard";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 
-const Home = ({ data }) => {
-  console.log(data);
+const Home = () => {
+  // ({ data }) => {
+  //console.log(data);
 
   return (
     <>
@@ -161,15 +162,15 @@ const Home = ({ data }) => {
     </>
   );
 };
-
+/*
 // This gets called on every request
 export async function getStaticProps(context) {
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/hello`);
+  const res = await fetch(`api/hello`);
   const data = await res.json();
 
   // Pass data to the page via props
   return { props: { data } };
 }
-
+*/
 export default React.memo(Home);
