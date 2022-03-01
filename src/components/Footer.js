@@ -54,6 +54,8 @@ const Footer = () => {
                   },
                 }}
                 disableRipple
+                component={"a"}
+                href={"mailto:ibrahimsadiktamim@gmail.com"}
               >
                 ibrahimsadiktamim@gmail.com
               </Button>

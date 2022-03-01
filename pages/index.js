@@ -7,8 +7,7 @@ import ServiceCard from "../src/components/ServiceCard";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
 
-const Home = () => {
-  // ({ data }) => {
+const Home = ({ data }) => {
   //console.log(data);
 
   return (
@@ -31,7 +30,7 @@ const Home = () => {
           <Typography variant="h3">
             Hi! I&#39;m{" "}
             <Typography variant={"span"} sx={{ color: "primary.main" }}>
-              Tam
+              {data.name}
             </Typography>
             .
           </Typography>
@@ -160,15 +159,15 @@ const Home = () => {
     </>
   );
 };
-/*
+
 // This gets called on every request
 export async function getStaticProps(context) {
   // Fetch data from external API
-  const res = await fetch(`api/hello`);
+  const res = await fetch(`https://tam11a.netlify.app/api/hello`);
   const data = await res.json();
 
   // Pass data to the page via props
   return { props: { data } };
 }
-*/
+
 export default React.memo(Home);
