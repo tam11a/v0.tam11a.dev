@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import React from "react";
 import theme from "../../styles/theme";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Container = (props) => {
   const { children, others } = props;
@@ -30,7 +32,9 @@ const Container = (props) => {
       }}
       {...others}
     >
+      <Header />
       {children}
+      <Footer />
     </Box>
   );
 };

@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <PageContainer>
         <Stack
           direction={"column"}
@@ -158,7 +157,6 @@ const Home = () => {
           </Grid>
         </Grid>
       </PageContainer>
-      <Footer />
     </>
   );
 };

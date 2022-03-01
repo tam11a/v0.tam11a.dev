@@ -16,7 +16,13 @@ const Footer = () => {
   return (
     <Paper sx={{ mt: "2rem", py: "2rem" }}>
       <PageContainer>
-        <Grid container spacing={3}>
+        <Grid
+          container
+          spacing={3}
+          width={{ xs: "96vw", sm: "98vw" }}
+          maxWidth={"1300px"}
+          mx={"auto"}
+        >
           <Grid
             item
             xs={12}

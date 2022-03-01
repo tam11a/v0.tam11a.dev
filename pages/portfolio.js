@@ -6,7 +6,6 @@ import PageContainer from "../src/components/PageContainer";
 const Portfolio = () => {
   return (
     <>
-      <Header />
       <PageContainer>
         <Stack
           direction={"column"}

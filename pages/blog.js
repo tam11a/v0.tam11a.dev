@@ -6,7 +6,6 @@ import PageContainer from "../src/components/PageContainer";
 const Blog = () => {
   return (
     <>
-      <Header />
       <PageContainer>
         <Stack
           direction={"column"}
