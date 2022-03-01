@@ -29,7 +29,7 @@ const Home = ({ data }) => {
             }}
           /> */}
           <Typography variant="h3">
-            Hi! I'm{" "}
+            Hi! I&#39;m{" "}
             <Typography variant={"span"} sx={{ color: "primary.main" }}>
               {data.name}
             </Typography>
@@ -92,7 +92,11 @@ const Home = ({ data }) => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: { xs: "center", sm: "flex-start", md: "center" },
+              justifyContent: {
+                xs: "center",
+                sm: "flex-start",
+                md: "center",
+              },
             }}
           >
             <ServiceCard
@@ -134,7 +138,11 @@ const Home = ({ data }) => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: { xs: "center", sm: "flex-start", md: "center" },
+              justifyContent: {
+                xs: "center",
+                sm: "flex-start",
+                md: "center",
+              },
             }}
           >
             <ServiceCard

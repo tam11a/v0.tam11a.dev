@@ -7,11 +7,15 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import theme from "../styles/theme";
-import Header from "../src/components/Header";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div suppressHydrationWarning>
+    <div suppressHydrationWarning={true}>
+      <Head>
+        <title>Portfolio || Tam11a</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
@@ -24,11 +28,11 @@ function MyApp({ Component, pageProps }) {
               },
             }}
           />
-          <Container>
-            {typeof window === "undefined" ? null : (
+          {typeof window === "undefined" ? null : (
+            <Container>
               <Component {...pageProps} />
-            )}
-          </Container>
+            </Container>
+          )}
         </ThemeProvider>
       </StyledEngineProvider>
     </div>
