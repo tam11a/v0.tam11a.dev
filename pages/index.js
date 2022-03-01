@@ -4,14 +4,9 @@ import { FiGithub, FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import PageContainer from "../src/components/PageContainer";
 import ServiceCard from "../src/components/ServiceCard";
-import Header from "../src/components/Header";
-import Footer from "../src/components/Footer";
-// ssr api call
-import { getHello } from "./api/hello";
+import makeURL from "../src/utilities/makeURL";
 
 const Home = ({ data }) => {
-  console.log(data.pbs);
-
   return (
     <>
       <PageContainer>
@@ -165,13 +160,9 @@ const Home = ({ data }) => {
 // This gets called on every request
 export async function getServerSideProps(context) {
   // Fetch data from external API
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/hello`);
-  // const data = await res.json();
-  console.log(process.env.NEXT_PUBLIC_SITE_URL);
-  const data = {
-    name: "Tam",
-    pbs: process.env.NEXT_PUBLIC_SITE_URL || "hello World",
-  }; //await getHello();
+  const res = await fetch(makeURL("/api/hello"));
+  const data = await res.json();
+
   // Pass data to the page via props
   return { props: { data } };
 }

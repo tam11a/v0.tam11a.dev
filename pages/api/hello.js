@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export async function getHello() {
-  const reposnse = { name: "Tam" };
+  const response = { name: "Tam" };
   return response;
 }
 
