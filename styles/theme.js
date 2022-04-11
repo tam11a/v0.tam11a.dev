@@ -59,6 +59,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold'
+        }
+      }
+    }
   },
 });
 
