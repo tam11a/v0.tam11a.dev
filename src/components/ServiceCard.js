@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ServiceCard = ({ imgUrl, imgSize, title, desc, toUrl, ...others }) => {
   return (
-    <Paper sx={{ maxWidth: "260px", height: '380px', p: 2 }} {...others}>
+    <Paper sx={{ maxWidth: "260px", height: {xs: '300px', sm:'350px', md: '400px', lg: '350px'}, p: 2 }} {...others}>
       <Stack direction={"column"} alignItems={"center"} spacing={2} height={'100%'}>
         <Box
           sx={{

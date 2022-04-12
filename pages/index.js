@@ -1,7 +1,7 @@
 import { Box, Chip, Divider, Grid, IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import { BsFillCircleFill } from 'react-icons/bs';
-import { FiGithub, FiInstagram } from "react-icons/fi";
+import { FiGithub, FiDribbble } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import PageContainer from "../src/components/PageContainer";
 import ServiceCard from "../src/components/ServiceCard";
@@ -46,9 +46,9 @@ const Home = ({ data }) => {
               color={"primary"}
               component={"a"}
               target="_blank"
-              href={"https://www.instagram.com/tam11a"}
+              href={"https://dribbble.com/tam11a"}
             >
-              <FiInstagram />
+              <FiDribbble />
             </IconButton>
             <IconButton
               color={"primary"}
@@ -60,7 +60,7 @@ const Home = ({ data }) => {
             </IconButton>
           </Stack>
         </Stack>
-        <Grid container spacing={1}>
+        <Grid container spacing={1} data-aos="fade-up">
           <Grid
             item
             xs={12}
@@ -159,6 +159,7 @@ const Home = ({ data }) => {
             <Typography variant="h4">Skills</Typography> 
               {/* <Typography variant="subtitle1" sx={{color: 'primary.dark'}}>Learning How to learn is life's most important skill.</Typography>  */}
               <Divider sx={{
+                marginTop: 2,
                 '&::before':{
                   minWidth: '10vw',
                   borderTopColor: '#a3a3a3'
@@ -167,7 +168,9 @@ const Home = ({ data }) => {
                   minWidth: '10vw',
                   borderTopColor: '#a3a3a3'
                 }
-              }}>
+              }}
+              
+              >
                 <Stack direction={'row'} spacing={1} alignItems={'center'}>
                   <BsFillCircleFill style={{
                     color: theme.palette.tarnary.main,
@@ -175,15 +178,15 @@ const Home = ({ data }) => {
                   }}/>
                   <Typography variant="subtitle1" sx={{color: 'tarnary.main'}}> Beginner</Typography> 
                   <BsFillCircleFill style={{
-                    color: theme.palette.primary.light,
-                    fontSize: '0.7rem'
-                  }}/>
-                  <Typography variant="subtitle1" sx={{color: 'primary.light'}}>Intermediate</Typography> 
-                  <BsFillCircleFill style={{
                     color: theme.palette.secondary.main,
                     fontSize: '0.7rem'
                   }}/>
-                  <Typography variant="subtitle1" sx={{color: 'secondary.main'}}>Expert</Typography> 
+                  <Typography variant="subtitle1" sx={{color: 'secondary.main'}}>Intermediate</Typography> 
+                  <BsFillCircleFill style={{
+                    color: theme.palette.primary.light,
+                    fontSize: '0.7rem'
+                  }}/>
+                  <Typography variant="subtitle1" sx={{color: 'primary.light'}}>Expert</Typography> 
                 </Stack>
               </Divider>
           </Box>

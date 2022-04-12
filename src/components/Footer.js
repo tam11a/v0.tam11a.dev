@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowRight, FiInstagram, FiGithub } from "react-icons/fi";
+import { FiArrowRight, FiDribbble, FiGithub } from "react-icons/fi";
 import { RiChatSmile3Line } from "react-icons/ri";
 import PageContainer from "./PageContainer";
 
@@ -39,8 +39,7 @@ const Footer = () => {
                 <Typography variant="h5">Let&#39;s talk.</Typography>
               </Stack>
               <Typography variant="normal">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                doloremque voluptas deleniti!
+                Everything you can imagine is real. Solutions needed with creative outlook on Software, Website, Illustration or Animation?? Feel free to talk.
               </Typography>
               <Button
                 endIcon={<FiArrowRight />}
@@ -73,10 +72,7 @@ const Footer = () => {
           >
             <Stack sx={{ maxWidth: "380px" }} spacing={2}>
               <Typography variant="normal">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae eum perspiciatis a sapiente cumque quisquam
-                doloremque fuga vel suscipit, culpa sequi, corporis nesciunt
-                tenetur explicabo nostrum. Debitis eum ratione excepturi!
+                Creativity is Inventing, Experimenting, Growing, Taking Risks, Breaking Rules, Making Mistakes, and Having Fun!!
               </Typography>
               <Typography variant="h6">
                 Let&#39;s Get a{" "}
@@ -113,9 +109,9 @@ const Footer = () => {
                   color={"primary"}
                   component={"a"}
                   target="_blank"
-                  href={"https://www.instagram.com/tam11a"}
+                  href={"https://dribbble.com/tam11a"}
                 >
-                  <FiInstagram />
+                  <FiDribbble />
                 </IconButton>
                 <IconButton
                   color={"primary"}

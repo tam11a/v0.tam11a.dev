@@ -22,7 +22,9 @@ import { MdClose, MdMenu } from "react-icons/md";
 import PageContainer from "./PageContainer";
 import { useRouter } from "next/router";
 
+
 const Header = () => {
+  
   const router = useRouter();
 
   const [drawer, setDrawer] = React.useState(false);
@@ -39,7 +41,7 @@ const Header = () => {
   };
 
   const goTo = (toLink) => {
-    if (toLink) router.push(toLink);
+    if (toLink && toLink !== 'backdropClick') router.push(toLink);
   };
 
   const tabStyle = {
@@ -107,6 +109,8 @@ const Header = () => {
               open={drawer}
               onClose={handleDrawer}
               onOpen={handleDrawer}
+              // hideBackdrop
+              // onBackdropClick={e => handleDrawer(e)}
             >
               <Box
                 role={"presentation"}

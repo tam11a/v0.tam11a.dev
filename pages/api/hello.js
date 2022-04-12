@@ -4,20 +4,20 @@ export async function getHello() {
   const response = { name: "Tam", skills: [
     {
       label: 'C Programming',
-      color: 'primary'
+      color: 'secondary'
     },
     {
-      label: 'C++ Basic',
+      label: 'C++ Programming',
       color: 'tarnary'
     },
     {
-      label: 'Python',
-      color: 'secondary'
+      label: 'Python Programming',
+      color: 'primary'
     },
     
     {
       label: 'Flask',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'Django',
@@ -25,27 +25,27 @@ export async function getHello() {
     },
     {
       label: 'NodeJS',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'HTML',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'CSS',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'JavaScript',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'ExpressJS',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'Arduino C',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'PyFirmata',
@@ -53,35 +53,35 @@ export async function getHello() {
     },
     {
       label: 'MongoDB',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'MySQL',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'SQLite',
-      color: 'primary'
+      color: 'secondary'
     },
     {
       label: 'Adobe Photoshop',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'Adobe Illustrator',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'Adobe Animate',
-      color: 'primary'
-    },
-    {
-      label: 'Figma',
       color: 'secondary'
     },
     {
-      label: 'Blender',
+      label: 'Figma',
       color: 'primary'
+    },
+    {
+      label: 'Blender',
+      color: 'secondary'
     },
     {
       label: 'PHP',
@@ -89,17 +89,32 @@ export async function getHello() {
     },
     {
       label: 'Material UI',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'JQuery',
-      color: 'secondary'
+      color: 'primary'
     },
     {
       label: 'Filmora',
+      color: 'secondary'
+    },
+    {
+      label: 'ReactJS',
       color: 'primary'
+    },
+    {
+      label: 'NextJS',
+      color: 'primary'
+    },
+    {
+      label: 'Wordpress',
+      color: 'secondary'
+    },
+    {
+      label: 'WIX',
+      color: 'secondary'
     }
-    
   ] };
   return response;
 }
