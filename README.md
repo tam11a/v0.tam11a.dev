@@ -2,7 +2,7 @@
 
 <img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> 
   
-<p><strong>Senior Full Stack Developer
+<p><strong>MERN Stack Developer
 <br> Vibing to : 🎧  </strong></p>
 
 ![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social)
