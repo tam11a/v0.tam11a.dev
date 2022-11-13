@@ -6,11 +6,13 @@
 <br> Vibing to : 🎧  </strong></p>
 
 ![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social) 
-  <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=flat" alt="totalViews" />
+
+  <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=for-the-badge&label=Views" alt="totalViews" />
+
 
 </div>
 
-<div align="center">
+<div align="center" style="margin-top: 10px">
   <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
   
   <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
