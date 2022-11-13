@@ -5,7 +5,8 @@
 <p><strong>MERN Stack Developer
 <br> Vibing to : 🎧  </strong></p>
 
-![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social)
+![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social) 
+  <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=flat" alt="totalViews" />
 
 </div>
 
