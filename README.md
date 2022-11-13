@@ -11,6 +11,8 @@
 
 <div align="center">
   <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
+  
+  <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
  </div>
 
 <hr></hr>
