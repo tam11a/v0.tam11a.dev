@@ -14,7 +14,7 @@ const Splash = () => {
         minHeight: "80vh",
         alignItems: "center",
         justifyContent: "center",
-        rowGap: 2,
+        rowGap: 3,
       }}
     >
       <Typography
@@ -36,11 +36,12 @@ const Splash = () => {
           },
         }}
       >
-        Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit.
-        Maxime mollitia, molestiae quas vel sint commodi repudiandae
-        consequuntur voluptatum <span>laborum</span> numquam blanditiis harum
-        quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
-        Provident <span>similique accusantium nemo autem</span>.
+        I'm <span>a Full-Stack Developer</span>. Lorem <span>ipsum</span> dolor
+        sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas
+        vel sint commodi repudiandae consequuntur voluptatum{" "}
+        <span>laborum</span> numquam blanditiis harum quisquam eius sed odit
+        fugiat iusto fuga praesentium optio, eaque rerum! Provident{" "}
+        <span>similique accusantium nemo autem</span>.
       </Typography>
       <Stack direction={"row"}>
         <IconButton color={"primary"}>
