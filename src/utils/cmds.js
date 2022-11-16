@@ -1,11 +1,11 @@
 exports.cmds = {
   lastSession: (ip, ts) => {
     return ts && ip
-      ? `Welcome to RheoOS 11.a.0.1 LTS (GNU/Linux 5.4.0-128-generic x86_64)
+      ? `Welcome to Tam.ENV 11.a.0.1 LTS (GNU/Linux 5.4.0-128-generic x86_64)
 
-* Profile:        https://github.com/tam11a
-* Management:     https://landscape.canonical.com
-* Support:        https://ubuntu.com/advantage
+* Github:   https://github.com/tam11a
+* Repo:     https://github.com/tam11a/tam11a
+* Support:  ibrahimsadiktamim@gmail.com
 
 New release '11.a.0.1 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
