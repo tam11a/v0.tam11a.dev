@@ -59,6 +59,7 @@ export const TerminalProvider = ({ children }) => {
         response = cmdlist.cd(cmd.split(" ")[1], directory);
         break;
       case "clear":
+      case "cls":
         clear();
         break;
       default:
@@ -76,7 +77,7 @@ export const TerminalProvider = ({ children }) => {
   const execute = (cmd) => {
     setTermit("");
     const res = exec(cmd);
-    if (res.cmd === "clear") return;
+    if (res.cmd === "clear" || res.cmd === "cls") return;
     sessionStorage.setItem("cmds", JSON.stringify([...cmds, res]));
     setCmds(JSON.parse(sessionStorage.getItem("cmds")));
   };

@@ -59,11 +59,10 @@ const Terminal = () => {
             <>
               <Typography
                 variant={"caption"}
-                sx={
-                  {
-                    // whiteSpace: "pre",
-                  }
-                }
+                sx={{
+                  whiteSpace: "pre-wrap",
+                  wordWrap: "break-word",
+                }}
               >
                 {cmd?.response}
               </Typography>
