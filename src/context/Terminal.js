@@ -58,6 +58,9 @@ export const TerminalProvider = ({ children }) => {
       case "cd":
         response = cmdlist.cd(cmd.split(" ")[1], directory);
         break;
+      case "do-release-upgrade":
+        response = "System already up to date.";
+        break;
       case "clear":
       case "cls":
         clear();
