@@ -1,7 +1,10 @@
 import { Container } from "@mui/material";
 import React from "react";
+import TerminalContext from "../../context/Terminal";
 
 const Terminal = () => {
+  const termit = React.useContext(TerminalContext);
+
   return (
     <Container
       sx={{
@@ -28,6 +31,20 @@ const Terminal = () => {
         },
       }}
     >
+      {termit.cmds?.map?.((cmd, index) => (
+        <React.Fragment key={index}>
+          <span className={"dollar"}>$</span>{" "}
+          <span
+            style={{
+              color: "#fff",
+            }}
+          >
+            {cmd.cmd}
+          </span>{" "}
+          <br />
+          {cmd.response} <br />
+        </React.Fragment>
+      ))}
       <span className={"dollar"}>$</span> bash ./run.sh{" "}
       <span className="dollar twc">_</span>
     </Container>
