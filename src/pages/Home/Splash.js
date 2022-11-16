@@ -16,6 +16,7 @@ const Splash = () => {
         justifyContent: "center",
         rowGap: 3,
       }}
+      data-aos={"fade-up"}
     >
       <Typography
         sx={{

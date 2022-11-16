@@ -1,3 +1,5 @@
+import React from "react";
+
 // @mui dependency
 import {
   CssBaseline,
@@ -24,7 +26,15 @@ import Terminal from "./components/Terminal";
 // customised theme
 import theme from "./styles/theme";
 
+// aos
+// importing aos
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

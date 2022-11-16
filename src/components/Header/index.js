@@ -107,10 +107,10 @@ const Navigations = ({ orientation }) => {
         fullWidth
       >
         <ToggleButton value={""}>./about</ToggleButton>
-        <ToggleButton value={"/#experience"}>./experience</ToggleButton>
-        <ToggleButton value={"/#work"}>./work</ToggleButton>
+        <ToggleButton value={"/experience"}>./experience</ToggleButton>
+        <ToggleButton value={"/work"}>./work</ToggleButton>
         {/* <ToggleButton>./blog</ToggleButton> */}
-        <ToggleButton value={"/#blogs"}>./blogs</ToggleButton>
+        <ToggleButton value={"/blogs"}>./blogs</ToggleButton>
       </ToggleButtonGroup>
       {orientation === "vertical" && <Divider flexItem sx={{ my: 2 }} />}
       <Button variant={"outlined"} color={"primary"} size={"small"}>
