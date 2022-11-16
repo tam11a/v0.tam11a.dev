@@ -1,7 +1,12 @@
 import React from "react";
+import Splash from "./Splash";
 
 const Index = () => {
-  return <div>Index</div>;
+  return (
+    <>
+      <Splash />
+    </>
+  );
 };
 
 export default Index;
