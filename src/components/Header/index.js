@@ -16,9 +16,12 @@ import { Link } from "react-router-dom";
 
 import { CgMenuRight } from "react-icons/cg";
 import useToggle from "../../hooks/useToggle";
+import TerminalContext from "../../context/Terminal";
 
 const Index = () => {
   const { value: open, toggleValue: onClose } = useToggle();
+  const termit = React.useContext(TerminalContext);
+
   return (
     <AppBar
       position="relative"
@@ -42,13 +45,13 @@ const Index = () => {
             letterSpacing: "1px",
             color: "unset",
             textDecoration: "none",
+            cursor: "pointer",
             "& span": {
               // fontSize: "1.3em",
               color: "primary.main",
             },
           }}
-          component={Link}
-          to={"/"}
+          onClick={() => termit.execute("cd ~")}
         >
           {"</> "}
           <span>tam11a</span>.dev
@@ -87,6 +90,7 @@ const NavDrawer = ({ open, onClose }) => {
 };
 
 const Navigations = ({ orientation }) => {
+  const termit = React.useContext(TerminalContext);
   return (
     <Stack
       direction={orientation === "vertical" ? "column" : "row"}
@@ -104,13 +108,14 @@ const Navigations = ({ orientation }) => {
         sx={{
           mr: { xs: 0, md: 2 },
         }}
+        onChange={(e, value) => termit.execute(`cd ~/${value}`)}
         fullWidth
       >
         <ToggleButton value={""}>./about</ToggleButton>
-        <ToggleButton value={"/experience"}>./experience</ToggleButton>
-        <ToggleButton value={"/work"}>./work</ToggleButton>
+        <ToggleButton value={"experience"}>./experience</ToggleButton>
+        <ToggleButton value={"work"}>./work</ToggleButton>
         {/* <ToggleButton>./blog</ToggleButton> */}
-        <ToggleButton value={"/blogs"}>./blogs</ToggleButton>
+        <ToggleButton value={"blogs"}>./blogs</ToggleButton>
       </ToggleButtonGroup>
       {orientation === "vertical" && <Divider flexItem sx={{ my: 2 }} />}
       <Button variant={"outlined"} color={"primary"} size={"small"}>

@@ -1,4 +1,5 @@
-import { Container } from "@mui/material";
+import { Container, InputBase, Stack, Typography } from "@mui/material";
+import moment from "moment";
 import React from "react";
 import TerminalContext from "../../context/Terminal";
 
@@ -33,20 +34,82 @@ const Terminal = () => {
     >
       {termit.cmds?.map?.((cmd, index) => (
         <React.Fragment key={index}>
-          <span className={"dollar"}>$</span>{" "}
-          <span
-            style={{
-              color: "#fff",
-            }}
-          >
-            {cmd.cmd}
-          </span>{" "}
-          <br />
-          {cmd.response} <br />
+          {cmd?.cmd && (
+            <>
+              [{moment(cmd?.ts).format("HH:mm")}]
+              <span
+                style={{
+                  color: "#fff",
+                }}
+              >
+                [<span className="dollar">~</span>]
+              </span>{" "}
+              <span className={"dollar"}>$ </span>
+              <span
+                style={{
+                  color: "#fff",
+                }}
+              >
+                {cmd?.cmd}
+              </span>{" "}
+              <br />
+            </>
+          )}
+          {cmd?.response && (
+            <>
+              <Typography
+                variant={"caption"}
+                sx={
+                  {
+                    // whiteSpace: "pre",
+                  }
+                }
+              >
+                {cmd?.response}
+              </Typography>
+              <br />
+            </>
+          )}
         </React.Fragment>
       ))}
-      <span className={"dollar"}>$</span> bash ./run.sh{" "}
-      <span className="dollar twc">_</span>
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          termit.execute(termit.termit);
+        }}
+      >
+        <InputBase
+          startAdornment={
+            <>
+              [{moment().format("HH:mm")}]
+              <span
+                style={{
+                  color: "#fff",
+                }}
+              >
+                [<span className="dollar">{termit.directory}</span>]
+              </span>
+              <span className={"dollar"} style={{ margin: "0 8px" }}>
+                $
+              </span>
+            </>
+          }
+          sx={{
+            p: 0,
+            m: 0,
+            mt: "-2px",
+            lineHeight: "1em",
+            color: "unset",
+            fontSize: "0.8rem",
+            caretColor: (theme) => theme.palette.primary.main,
+            caretShape: "underscore",
+          }}
+          value={termit.termit}
+          onChange={(e) => termit.setTermit(e.target.value)}
+        />
+      </form>
+      {/* <span className="dollar twc">_</span> */}
     </Container>
   );
 };

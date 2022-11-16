@@ -1,21 +1,105 @@
+import moment from "moment";
 import React from "react";
+
+import { cmds as cmdlist } from "../utils/cmds";
 
 const TerminalContext = React.createContext();
 
 export const TerminalProvider = ({ children }) => {
-  const [cmds, setCmds] = React.useState([
-    {
-      cmd: "bash ./run.sh",
-      response: "bash: run.sh: No such file or directory",
-    },
-  ]);
+  const [lastSession] = React.useState({
+    ip: localStorage.getItem("ip"),
+    ts: localStorage.getItem("ts"),
+  });
+
+  React.useEffect(() => {
+    if (sessionStorage.getItem("cmds")) return;
+    saveLastSessionLog();
+  }, []);
+
+  const saveLastSessionLog = async () => {
+    const res = await fetch("https://api.ipify.org/?format=json");
+    const data = await res.json();
+    localStorage.setItem("ts", moment().toISOString());
+    localStorage.setItem("ip", data?.ip);
+  };
+
+  const [directory, setDirectory] = React.useState("~");
+
+  const [cmds, setCmds] = React.useState(
+    sessionStorage.getItem("cmds")
+      ? JSON.parse(sessionStorage.getItem("cmds"))
+      : [
+          {
+            response: cmdlist.lastSession(
+              lastSession?.ip,
+              lastSession?.ts ? moment(lastSession?.ts) : undefined
+            ),
+          },
+          {
+            cmd: "bash ./session.sh",
+            response: "bash: session.sh: No such file or directory",
+            dir: directory,
+            ts: moment().toLocaleString(),
+          },
+        ]
+  );
+
+  const exec = (cmd) => {
+    if (!cmd)
+      return {
+        cmd,
+        ts: moment().toLocaleString(),
+        dir: directory,
+      };
+
+    var response;
+
+    switch (cmd.split(" ")[0]) {
+      case "cd":
+        response = cmdlist.cd(cmd.split(" ")[1], directory);
+        break;
+      case "clear":
+        clear();
+        break;
+      default:
+        response = cmdlist.commandNotFound(cmd.split(" ")[0]);
+    }
+
+    return {
+      cmd,
+      response,
+      ts: moment().toLocaleString(),
+      dir: directory,
+    };
+  };
+
+  const execute = (cmd) => {
+    setTermit("");
+    const res = exec(cmd);
+    if (res.cmd === "clear") return;
+    sessionStorage.setItem("cmds", JSON.stringify([...cmds, res]));
+    setCmds(JSON.parse(sessionStorage.getItem("cmds")));
+  };
+
+  const clear = () => {
+    sessionStorage.setItem("cmds", JSON.stringify([]));
+    setCmds(JSON.parse(sessionStorage.getItem("cmds")));
+  };
+
+  const [termit, setTermit] = React.useState("");
+
   return (
     <TerminalContext.Provider
       value={{
         cmds: cmds,
+        termit,
+        setTermit,
+        execute,
+        directory,
       }}
     >
       {children}
+      <input style={{ display: "none" }} autoFocus />
     </TerminalContext.Provider>
   );
 };
