@@ -1,4 +1,4 @@
-import { Container, ThemeProvider } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
 
 const Terminal = () => {
