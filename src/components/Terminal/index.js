@@ -12,28 +12,24 @@ const Terminal = () => {
           animation: "twc-anime 1s infinite",
         },
         "@keyframes twc-anime": {
-          "0%": { color: "#8fcdff" },
+          "0%": { color: "primary.main" },
           "50%": { color: "transparent" },
-          "100%": { color: "#8fcdff" },
+          "100%": { color: "primary.main" },
         },
         fontSize: "0.8em",
         color: "#aaa",
-        "@font-face": {
-          fontFamily: "Monaco",
-          src: "url(/Monaco.woff)",
-        },
         fontFamily: "Monaco, Inconsolata, monospace",
         "& *": {
           fontFamily: "Monaco, Inconsolata, monospace",
         },
         ".dollar": {
           fontWeight: "500",
-          color: "#8fcdff",
+          color: "primary.main",
         },
       }}
     >
-      <span class={"dollar"}>$</span> bash ./run.sh{" "}
-      <span class="dollar twc">_</span>
+      <span className={"dollar"}>$</span> bash ./run.sh{" "}
+      <span className="dollar twc">_</span>
     </Container>
   );
 };

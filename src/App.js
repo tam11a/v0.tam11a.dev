@@ -34,6 +34,14 @@ function App() {
             fontFamily: "AgencyFB",
             src: "url(/agency-fb.ttf)",
           },
+          "@font-face": {
+            fontFamily: "Monaco",
+            src: "url(/Monaco.woff)",
+          },
+          "@font-face": {
+            fontFamily: "SF Mono",
+            src: "url(/sf-mono.woff2)",
+          },
         }}
       />
       <TerminalProvider>
@@ -43,7 +51,18 @@ function App() {
             justifyContent: "space-between",
           }}
         >
-          <Grid item xs={12} md={8.7}>
+          <Grid
+            item
+            xs={12}
+            md={8.7}
+            sx={{
+              minHeight: "100vh",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              position: "relative",
+            }}
+          >
             <BrowserRouter basename="">
               <Header />
               <AppRoutes />
