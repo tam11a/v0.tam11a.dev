@@ -2,11 +2,13 @@ import moment from "moment";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { cmds as cmdlist } from "../utils/cmds";
+// import { cmdlist } from "../utils/cmds";
+const {cmdlist} = require('../utils/cmds')
 
 const TerminalContext = React.createContext();
 
 export const TerminalProvider = ({ children }) => {
+  // console.log(cmdlist);
   const location = useLocation();
   const navigate = useNavigate();
 
