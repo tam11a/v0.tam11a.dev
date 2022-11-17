@@ -100,7 +100,12 @@ export const TerminalProvider = ({ children }) => {
   const execute = (cmd, fromTermit) => {
     setTermit("");
     const res = exec(cmd, fromTermit);
-    if (res.cmd === "clear" || res.cmd === "cls" || fromTermit) return;
+    if (
+      res.cmd === "clear" ||
+      res.cmd === "cls" ||
+      (fromTermit && cmd.split(" ")[0] === "cd")
+    )
+      return;
     sessionStorage.setItem("cmds", JSON.stringify([...cmds, res]));
     setCmds(JSON.parse(sessionStorage.getItem("cmds")));
   };

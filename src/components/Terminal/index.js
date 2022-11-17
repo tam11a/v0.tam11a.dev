@@ -2,9 +2,11 @@ import { Container, InputBase, Stack, Typography } from "@mui/material";
 import moment from "moment";
 import React from "react";
 import TerminalContext from "../../context/Terminal";
+import useFocus from "../../hooks/useFocus";
 
 const Terminal = () => {
   const termit = React.useContext(TerminalContext);
+  const [inputRef, setInputFocus] = useFocus();
 
   return (
     <Container
@@ -33,6 +35,7 @@ const Terminal = () => {
           color: "primary.main",
         },
       }}
+      onClick={setInputFocus}
     >
       {termit.cmds?.map?.((cmd, index) => (
         <React.Fragment key={index}>
@@ -107,6 +110,7 @@ const Terminal = () => {
               </span>
             </>
           }
+          ref={inputRef}
           sx={{
             p: 0,
             m: 0,
