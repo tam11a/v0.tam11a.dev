@@ -35,7 +35,7 @@ const Index = () => {
               color: "#efefef",
               textDecoration: "none",
               fontSize: "0.7rem",
-              letterSpacing: "2px",
+              letterSpacing: "3px",
               span: {
                 color: "primary.main",
               },
