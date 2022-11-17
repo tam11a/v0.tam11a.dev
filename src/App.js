@@ -54,38 +54,38 @@ function App() {
           },
         }}
       />
-      <TerminalProvider>
-        <Grid
-          container
-          sx={{
-            justifyContent: "space-between",
-          }}
-        >
+      <BrowserRouter basename="">
+        <TerminalProvider>
           <Grid
-            item
-            xs={12}
-            md={8.7}
+            container
             sx={{
-              minHeight: "100vh",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              position: "relative",
+              justifyContent: "space-between",
             }}
           >
-            <BrowserRouter basename="">
+            <Grid
+              item
+              xs={12}
+              md={8.7}
+              sx={{
+                minHeight: "100vh",
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+                position: "relative",
+              }}
+            >
               <Header />
               <AppRoutes />
               <Footer />
-            </BrowserRouter>
+            </Grid>
+            <Grid item xs={0} md={3}>
+              <Hidden mdDown>
+                <Terminal />
+              </Hidden>
+            </Grid>
           </Grid>
-          <Grid item xs={0} md={3}>
-            <Hidden mdDown>
-              <Terminal />
-            </Hidden>
-          </Grid>
-        </Grid>
-      </TerminalProvider>
+        </TerminalProvider>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

@@ -11,6 +11,8 @@ const Terminal = () => {
       sx={{
         bgcolor: "#00000011",
         height: "100vh",
+        maxHeight: "100vh",
+        overflowY: "auto",
         py: 2,
         ".twc": {
           animation: "twc-anime 1s infinite",
@@ -42,7 +44,12 @@ const Terminal = () => {
                   color: "#fff",
                 }}
               >
-                [<span className="dollar">~</span>]
+                [
+                <span className="dollar">
+                  {cmd.dir?.split?.("/")?.[cmd.dir?.split?.("/")?.length - 1] ||
+                    "~"}
+                </span>
+                ]
               </span>{" "}
               <span className={"dollar"}>$ </span>
               <span
@@ -87,7 +94,13 @@ const Terminal = () => {
                   color: "#fff",
                 }}
               >
-                [<span className="dollar">{termit.directory}</span>]
+                [
+                <span className="dollar">
+                  {termit.directory?.split?.("/")?.[
+                    termit.directory?.split?.("/")?.length - 1
+                  ] || "~"}
+                </span>
+                ]
               </span>
               <span className={"dollar"} style={{ margin: "0 8px" }}>
                 $

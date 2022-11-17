@@ -1,11 +1,15 @@
 import moment from "moment";
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { cmds as cmdlist } from "../utils/cmds";
 
 const TerminalContext = React.createContext();
 
 export const TerminalProvider = ({ children }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [lastSession] = React.useState({
     ip: localStorage.getItem("ip"),
     ts: localStorage.getItem("ts"),
@@ -23,7 +27,15 @@ export const TerminalProvider = ({ children }) => {
     localStorage.setItem("ip", data?.ip);
   };
 
-  const [directory, setDirectory] = React.useState("~");
+  const [directory, setDirectory] = React.useState(
+    `~${location?.pathname || ""}`
+  );
+
+  React.useEffect(() => {
+    if (!location) return;
+    execute(`cd ~${location?.pathname || ""}`);
+    setDirectory(`~${location?.pathname || ""}`);
+  }, [location]);
 
   const [cmds, setCmds] = React.useState(
     sessionStorage.getItem("cmds")
@@ -57,6 +69,9 @@ export const TerminalProvider = ({ children }) => {
     switch (cmd.split(" ")[0]) {
       case "cd":
         response = cmdlist.cd(cmd.split(" ")[1], directory);
+        break;
+      case "ls":
+        response = cmdlist.ls(cmd.split(" ")[1], directory);
         break;
       case "do-release-upgrade":
         response = "System already up to date.";
@@ -100,6 +115,7 @@ export const TerminalProvider = ({ children }) => {
         setTermit,
         execute,
         directory,
+        navigate,
       }}
     >
       {children}

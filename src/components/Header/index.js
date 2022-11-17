@@ -51,7 +51,7 @@ const Index = () => {
               color: "primary.main",
             },
           }}
-          onClick={() => termit.execute("cd ~")}
+          onClick={() => termit.navigate("/")}
         >
           {"</> "}
           <span>tam11a</span>.dev
@@ -101,21 +101,32 @@ const Navigations = ({ orientation }) => {
       }}
     >
       <ToggleButtonGroup
-        value={""}
+        value={termit?.directory.split("/")[1] || ""}
         orientation={orientation || "horizontal"}
         color={"secondary"}
         size={"small"}
         sx={{
           mr: { xs: 0, md: 2 },
         }}
-        onChange={(e, value) => termit.execute(`cd ~/${value}`)}
+        exclusive
+        onChange={(e, value) => {
+          termit.navigate(value);
+        }}
         fullWidth
       >
-        <ToggleButton value={""}>./about</ToggleButton>
-        <ToggleButton value={"experience"}>./experience</ToggleButton>
-        <ToggleButton value={"work"}>./work</ToggleButton>
+        <ToggleButton
+          value={""}
+          sx={{
+            display: "none",
+          }}
+        >
+          ~/
+        </ToggleButton>
+        <ToggleButton value={"about"}>~/about</ToggleButton>
+        <ToggleButton value={"experience"}>~/experience</ToggleButton>
+        <ToggleButton value={"work"}>~/work</ToggleButton>
         {/* <ToggleButton>./blog</ToggleButton> */}
-        <ToggleButton value={"blogs"}>./blogs</ToggleButton>
+        <ToggleButton value={"blogs"}>~/blogs</ToggleButton>
       </ToggleButtonGroup>
       {orientation === "vertical" && <Divider flexItem sx={{ my: 2 }} />}
       <Button variant={"outlined"} color={"primary"} size={"small"}>
