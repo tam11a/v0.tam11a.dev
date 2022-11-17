@@ -82,7 +82,7 @@ const Terminal = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          termit.execute(termit.termit);
+          termit.execute(termit.termit, true);
         }}
       >
         <InputBase

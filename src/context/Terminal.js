@@ -56,7 +56,7 @@ export const TerminalProvider = ({ children }) => {
         ]
   );
 
-  const exec = (cmd) => {
+  const exec = (cmd, fromTermit) => {
     if (!cmd)
       return {
         cmd,
@@ -68,7 +68,10 @@ export const TerminalProvider = ({ children }) => {
 
     switch (cmd.split(" ")[0]) {
       case "cd":
-        response = cmdlist.cd(cmd.split(" ")[1], directory);
+        if (cmd.split(" ")[1] === "..") navigate(-1);
+        else if (fromTermit)
+          navigate(`${cmd.split(" ")[1].replace?.("~", "/")}`);
+        else response = cmdlist.cd(cmd.split(" ")[1], directory);
         break;
       case "ls":
         response = cmdlist.ls(cmd.split(" ")[1], directory);
@@ -92,10 +95,10 @@ export const TerminalProvider = ({ children }) => {
     };
   };
 
-  const execute = (cmd) => {
+  const execute = (cmd, fromTermit) => {
     setTermit("");
-    const res = exec(cmd);
-    if (res.cmd === "clear" || res.cmd === "cls") return;
+    const res = exec(cmd, fromTermit);
+    if (res.cmd === "clear" || res.cmd === "cls" || fromTermit) return;
     sessionStorage.setItem("cmds", JSON.stringify([...cmds, res]));
     setCmds(JSON.parse(sessionStorage.getItem("cmds")));
   };
