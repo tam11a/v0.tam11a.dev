@@ -39,7 +39,7 @@ const Terminal = () => {
     >
       {termit.cmds?.map?.((cmd, index) => (
         <React.Fragment key={index}>
-          {cmd?.cmd && (
+          {cmd?.cmd || (!cmd?.cmd && !cmd?.response) ? (
             <>
               [{moment(cmd?.ts).format("HH:mm")}]
               <span
@@ -64,6 +64,8 @@ const Terminal = () => {
               </span>{" "}
               <br />
             </>
+          ) : (
+            <></>
           )}
           {cmd?.response && (
             <>
