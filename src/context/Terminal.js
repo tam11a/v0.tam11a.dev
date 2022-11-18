@@ -3,7 +3,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 // import { cmdlist } from "../utils/cmds";
-const {cmdlist} = require('../utils/cmds')
+const { cmdlist } = require("../utils/cmds");
 
 const TerminalContext = React.createContext();
 
@@ -86,7 +86,7 @@ export const TerminalProvider = ({ children }) => {
         clear();
         break;
       default:
-        response = cmdlist.commandNotFound(cmd.split(" ")[0]);
+        response = cmdlist.commandNotFound(cmd.split(" ")[0], directory);
     }
 
     return {

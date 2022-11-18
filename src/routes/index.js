@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 // pages
 import Home from "../pages/Home";
+import About from "../pages/About";
 import Page404 from "../pages/404";
 
 const Index = () => {
@@ -17,10 +18,22 @@ const Index = () => {
         py: 1.5,
         flex: 1,
         zIndex: 10,
+        overflow: "hidden",
+        overflowY: "auto",
+
+        /* Chrome, Safari and Opera */
+        "::-webkit-scrollbar": {
+          display: "none",
+        },
+
+        /* Edge, Firefox */
+        msOverflowStyle: "none",
+        scrollbarWidth: "none",
       }}
     >
       <Routes path={"/"}>
         <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Container>

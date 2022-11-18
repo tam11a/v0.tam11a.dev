@@ -52,6 +52,45 @@ function App() {
             fontFamily: "SF Mono",
             src: "url(/sf-mono.woff2)",
           },
+          "*": {
+            // Disable Blue Highlight when Touch/Press object with cursor: 'pointer' in Android
+            WebkitTapHighlightColor: "transparent",
+            // scrollbar
+            scrollbarWidth: "5px",
+            scrollbarHeight: "5px",
+            scrollbarColor: `${theme.palette.primary.main} #00000033`,
+            outline: "none !important",
+          },
+          "*::-webkit-scrollbar": {
+            height: "5px",
+            width: "5px",
+          },
+          "*::-webkit-scrollbar-track": {
+            background: "#00000033",
+          },
+          "*::-webkit-scrollbar-thumb": {
+            background: `${theme.palette.primary.main}aa`,
+          },
+          "*::-webkit-scrollbar-thumb:hover": {
+            background: theme.palette.primary.main,
+          },
+          body: {
+            overflowX: "hidden",
+          },
+          // App Body Scrollbar
+          "&::-webkit-scrollbar": {
+            width: "5px",
+            height: "5px",
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "#00000033",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: `${theme.palette.primary.main}aa`,
+          },
+          "&::-webkit-scrollbar-thumb:hover": {
+            background: theme.palette.primary.main,
+          },
         }}
       />
       <BrowserRouter basename="">
@@ -60,14 +99,16 @@ function App() {
             container
             sx={{
               justifyContent: "space-between",
+              height: "100vh",
+              overflow: "hidden",
+              overflowY: "auto",
             }}
           >
             <Grid
               item
-              xs={12}
-              md={8.7}
               sx={{
-                minHeight: "100vh",
+                flex: 1,
+                height: "100vh",
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",

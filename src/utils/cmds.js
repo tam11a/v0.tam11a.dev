@@ -13,8 +13,10 @@ Last login: ${ts} from ${ip}
 `
       : "";
   },
-  commandNotFound: (cmd) => {
-    return `Command '${cmd}' not found, but there are 0 similar ones.`;
+  commandNotFound: (cmd, currentDir) => {
+    return getLS(currentDir)?.includes(`${cmd}*`)
+      ? ""
+      : `Command '${cmd}' not found, but there are 0 similar ones.`;
   },
   cd: (path, currentDir) => {
     let x;
@@ -90,18 +92,18 @@ export const folders = {
         ls: {},
         type: "folder",
       },
-      experience: {
-        ls: {},
-        type: "folder",
-      },
-      work: {
-        ls: {},
-        type: "folder",
-      },
-      blogs: {
-        ls: {},
-        type: "folder",
-      },
+      // experience: {
+      //   ls: {},
+      //   type: "folder",
+      // },
+      // work: {
+      //   ls: {},
+      //   type: "folder",
+      // },
+      // blogs: {
+      //   ls: {},
+      //   type: "folder",
+      // },
       "resume.pdf": {
         url: "/resume.pdf",
         type: "file",

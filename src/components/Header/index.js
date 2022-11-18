@@ -129,7 +129,15 @@ const Navigations = ({ orientation }) => {
         <ToggleButton value={"blogs"}>~/blogs</ToggleButton>
       </ToggleButtonGroup>
       {orientation === "vertical" && <Divider flexItem sx={{ my: 2 }} />}
-      <Button variant={"outlined"} color={"primary"} size={"small"}>
+      <Button
+        variant={"outlined"}
+        color={"primary"}
+        size={"small"}
+        onClick={() => {
+          termit.execute("resume.pdf");
+          window.open("/resume.pdf", "_blank");
+        }}
+      >
         resume
       </Button>
     </Stack>

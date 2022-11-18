@@ -112,7 +112,6 @@ const Terminal = () => {
               </span>
             </>
           }
-          ref={inputRef}
           sx={{
             p: 0,
             m: 0,
@@ -125,6 +124,7 @@ const Terminal = () => {
           }}
           value={termit.termit}
           onChange={(e) => termit.setTermit(e.target.value)}
+          inputRef={inputRef}
         />
       </form>
       {/* <span className="dollar twc">_</span> */}
