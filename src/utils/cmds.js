@@ -14,7 +14,9 @@ Last login: ${ts} from ${ip}
       : "";
   },
   commandNotFound: (cmd, currentDir) => {
-    return getLS(currentDir)?.includes(`${cmd}*`)
+    const res = getLS(currentDir).includes(`${cmd}`) && cmd.includes(".");
+    if (res) window.open(links[cmd], "_blank");
+    return res
       ? ""
       : `Command '${cmd}' not found, but there are 0 similar ones.`;
   },
@@ -67,7 +69,7 @@ export const getLS = (path) => {
     }: Not a directory`;
   else
     for (const [key, value] of Object.entries(tempList.ls)) {
-      xfiles += `${key}${value.type === "file" ? "*" : ""}
+      xfiles += `${key} ${value.type !== "folder" ? `[${value.type}]` : ""}
 `;
     }
   return xfiles.trim();
@@ -105,10 +107,25 @@ export const folders = {
       //   type: "folder",
       // },
       "resume.pdf": {
-        url: "/resume.pdf",
         type: "file",
+      },
+      "github.lnk": {
+        type: "link",
+      },
+      "whatsapp.lnk": {
+        type: "link",
+      },
+      "linked-in.lnk": {
+        type: "link",
       },
     },
     type: "folder",
   },
+};
+
+export const links = {
+  "github.lnk": "https://github.com/tam11a",
+  "whatsapp.lnk": "https://wa.me/+8801521579148",
+  "resume.pdf": "/resume.pdf",
+  "linked-in.lnk": "https://www.linkedin.com/in/ibrahimsadiktamim/",
 };

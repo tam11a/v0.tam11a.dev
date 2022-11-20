@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Box,
   Button,
   Divider,
   Drawer,
@@ -12,7 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { CgMenuRight } from "react-icons/cg";
 import useToggle from "../../hooks/useToggle";
@@ -23,51 +23,62 @@ const Index = () => {
   const termit = React.useContext(TerminalContext);
 
   return (
-    <AppBar
-      position="relative"
-      sx={{
-        bgcolor: "transparent",
-      }}
-      color={"secondary"}
-      elevation={0}
-    >
-      <Toolbar
+    <>
+      <AppBar
+        position="relative"
         sx={{
-          alignItems: "center",
-          justifyContent: "space-between",
-          columnGap: 1,
+          bgcolor: "transparent",
         }}
+        color={"secondary"}
+        elevation={0}
+        // data-aos={"fade-down"}
       >
-        <Typography
+        <Toolbar
           sx={{
-            fontSize: "0.8em",
-            fontFamily: "Monaco, Inconsolata, monospace",
-            letterSpacing: "1px",
-            color: "unset",
-            textDecoration: "none",
-            cursor: "pointer",
-            "& span": {
-              // fontSize: "1.3em",
-              color: "primary.main",
-            },
+            alignItems: "center",
+            justifyContent: "space-between",
+            columnGap: 1,
           }}
-          onClick={() => termit.navigate("/")}
         >
-          {"</> "}
-          <span>tam11a</span>.dev
-        </Typography>
+          <Typography
+            sx={{
+              fontSize: "0.8em",
+              fontFamily: "Monaco, Inconsolata, monospace",
+              letterSpacing: "1px",
+              color: "unset",
+              textDecoration: "none",
+              cursor: "pointer",
+              "& span": {
+                // fontSize: "1.3em",
+                color: "primary.main",
+              },
+            }}
+            onClick={() => termit.navigate("/")}
+          >
+            {"</> "}
+            <span>tam11a</span>.dev
+          </Typography>
 
-        <Hidden mdDown>
-          <Navigations />
-        </Hidden>
-        <Hidden mdUp>
-          <IconButton color={"primary"} onClick={onClose}>
-            <CgMenuRight />
-          </IconButton>
-          <NavDrawer open={open} onClose={onClose} />
-        </Hidden>
-      </Toolbar>
-    </AppBar>
+          <Hidden mdDown>
+            <Navigations />
+          </Hidden>
+          <Hidden mdUp>
+            <IconButton color={"primary"} onClick={onClose}>
+              <CgMenuRight />
+            </IconButton>
+            <NavDrawer open={open} onClose={onClose} />
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+      <Box
+        sx={{
+          height: {
+            xs: "15px",
+            sm: "15px",
+          },
+        }}
+      />
+    </>
   );
 };
 
@@ -135,7 +146,7 @@ const Navigations = ({ orientation }) => {
         size={"small"}
         onClick={() => {
           termit.execute("resume.pdf");
-          window.open("/resume.pdf", "_blank");
+          // window.open("/resume.pdf", "_blank");
         }}
       >
         resume

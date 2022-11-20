@@ -12,7 +12,9 @@ const Index = () => {
           width: "100%",
           justifyContent: "space-between",
           px: 2.5,
+          zIndex: 11,
         }}
+        data-aos={"fade-up"}
       >
         <span></span>
         <Box

@@ -101,7 +101,6 @@ function App() {
               justifyContent: "space-between",
               height: "100vh",
               overflow: "hidden",
-              overflowY: "auto",
             }}
           >
             <Grid
@@ -113,6 +112,7 @@ function App() {
                 alignItems: "center",
                 flexDirection: "column",
                 position: "relative",
+                width: "100%",
               }}
             >
               <Header />

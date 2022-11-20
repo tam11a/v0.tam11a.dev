@@ -35,8 +35,10 @@ export const TerminalProvider = ({ children }) => {
 
   React.useEffect(() => {
     if (!location) return;
-    execute(`cd ~${location?.pathname || ""}`);
-    setDirectory(`~${location?.pathname || ""}`);
+    if (!location?.pathname?.includes?.(".")) {
+      execute(`cd ~${location?.pathname || ""}`);
+      setDirectory(`~${location?.pathname || ""}`);
+    } else execute(location?.pathname || "");
   }, [location]);
 
   const [cmds, setCmds] = React.useState(

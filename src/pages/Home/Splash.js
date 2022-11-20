@@ -4,9 +4,12 @@ import { IconButton, Stack, Typography } from "@mui/material";
 
 import { VscGithubAlt } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
-import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import moment from "moment";
+import TerminalContext from "../../context/Terminal";
 
 const Splash = () => {
+  const termit = React.useContext(TerminalContext);
   return (
     <Stack
       direction={"column"}
@@ -32,26 +35,44 @@ const Splash = () => {
         variant={"subtitle2"}
         sx={{
           textAlign: "center",
+          color: "#aaa",
           "& span": {
             color: "primary.main",
           },
         }}
       >
-        I'm <span>a Full-Stack Developer</span>. Lorem <span>ipsum</span> dolor
-        sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas
-        vel sint commodi repudiandae consequuntur voluptatum{" "}
-        <span>laborum</span> numquam blanditiis harum quisquam eius sed odit
-        fugiat iusto fuga praesentium optio, eaque rerum! Provident{" "}
-        <span>similique accusantium nemo autem</span>.
+        I'm <span>a Full-Stack Developer</span>. I'm a dedicated hard working
+        team player with experience and excellent knowledge on cutting edge
+        up-to-date web development technologies like <span>React JS</span>,{" "}
+        <span>Node JS</span>, <span>Express JS</span>, <span>Python</span>,{" "}
+        <span>MongoDB</span>, <span>MySQL</span> seeking a web developer role
+        for web applications or websites. I will to utilize my{" "}
+        <span>
+          {moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "years")} years{" "}
+          {moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "months") % 12}{" "}
+          months{" "}
+        </span>{" "}
+        of experience as <span>Programmer</span> &{" "}
+        <span>Full-Stack Developer</span> and excellent creative skills for
+        achieve its goals.
       </Typography>
       <Stack direction={"row"}>
-        <IconButton color={"primary"}>
+        <IconButton
+          color={"primary"}
+          onClick={() => termit.execute("github.lnk")}
+        >
           <VscGithubAlt />
         </IconButton>
-        <IconButton color={"primary"}>
-          <FaInstagram />
+        <IconButton
+          color={"primary"}
+          onClick={() => termit.execute("whatsapp.lnk")}
+        >
+          <FaWhatsapp />
         </IconButton>
-        <IconButton color={"primary"}>
+        <IconButton
+          color={"primary"}
+          onClick={() => termit.execute("linked-in.lnk")}
+        >
           <SlSocialLinkedin />
         </IconButton>
       </Stack>
