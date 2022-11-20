@@ -8,7 +8,7 @@ const Index = () => {
       direction={"row"}
       alignItems={"center"}
       justifyContent={"center"}
-      height={"80%"}
+      minHeight={"70vh"}
     >
       {/* <Avatar
         src={"/404.svg"}

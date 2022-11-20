@@ -15,8 +15,8 @@ Last login: ${ts} from ${ip}
   },
   commandNotFound: (cmd, currentDir) => {
     const res = getLS(currentDir).includes(`${cmd}`) && cmd.includes(".");
-    if (res) window.open(links[cmd], "_blank");
-    return res
+    if (res || cmd.includes(".")) window.open(links[cmd], "_blank");
+    return res || cmd.includes(".")
       ? ""
       : `Command '${cmd}' not found, but there are 0 similar ones.`;
   },
