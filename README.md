@@ -1,27 +1,26 @@
 <div align="center" width="50">
-
-<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
+<!-- 
+<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> -->
+<img src="./public/contributions.svg" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
 
 <p><strong>MERN Stack Developer
 <br> Vibing to : 🎧  </strong></p>
 
-![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social)
-<br>
-
-<img src="./public/contributions.svg" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
+<!-- ![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social) -->
+<!-- <br> -->
 
   <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=for-the-badge&label=Views" alt="totalViews" />
 
 </div>
 
 <div align="center" style="margin-top: 10px">
-  <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
-  
+  <!-- <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
+   -->
   <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
  </div>
 
 <hr></hr>
-<div align="center">
+<!-- <div align="center">
 
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
@@ -40,19 +39,42 @@
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=flat&logo=heroku&logoColor=white)
 
-</div>
+</div> -->
 
 ```dart
-// tools_I_use organized
+// tools_I_use_organized
 
 class About extends Me {
   const myTools = {
-    "ProgramingLanguages" : { "C++", "C", "Python", "Javascript" },
-    "OtherLanguages" : { "HTML", "CSS", "Bash", "Json", "Markdown" },
-    "Database" : { "Firebase", "Sqlite", "MongoDB" },
-    "Editors" : { "Vscode", "Sublime" },
-    "Platforms" : { "GNU/Linux", "Windows" },
-    "OtherTools" : { "Git", "Figma", "Photoshop", "Illustrator" }
+    "Language" : ["JavaScript", "TypeScript", "Python", "C++", "C"],
+    "Frameworks" : {
+      "Frontend": {
+        "JavaScript": ["ReactJS", "NextJS"]
+      },
+      "Backend": {
+        "JavaScript": ["ExpressJS"],
+        "Python": ["Flask"]
+      }
+    },
+    "Database" : {
+      "Language": {
+        "SQL": ["MySQL", "SQLite"],
+        "NoSQL": ["MongoDB"]
+        },
+      "ORM": {
+        "SQL": ["Sequelize", "MySQL"],
+        "NoSQL": ["Mongoose", "MongoDB", "Firebase"]
+      }
+    },
+    "APIProtocol": ["REST"],
+    "CommunicationProtocol": ["HTTP/HTTPS", "Socket", "MQTT"],
+    "Platforms" : ["GNU/Linux", "Windows"],
+    "Editors" : ["Vscode", "Sublime"],
+    "Additional" : ["HTML", "CSS", "Bash", "JSON", "Markdown"],
+    "Scrum": ["Jira"],
+    "UiUx": ["Figma"],
+    "Git": ["Git Bash", "Github Desktop", "Git Kracken"],
+    "Graphics" : ["Photoshop", "Illustrator"]
   };
 }
 ```
