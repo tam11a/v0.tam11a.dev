@@ -1,14 +1,16 @@
 <div align="center" width="50">
 
-<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> 
-  
+<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
+
 <p><strong>MERN Stack Developer
 <br> Vibing to : 🎧  </strong></p>
 
-![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social) 
+![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social)
+<br>
+
+<img src="./public/contributions.svg" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
 
   <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=for-the-badge&label=Views" alt="totalViews" />
-
 
 </div>
 
@@ -40,12 +42,11 @@
 
 </div>
 
-
 ```dart
 // tools_I_use organized
 
-class About extends Me { 
-  const myTools = {  
+class About extends Me {
+  const myTools = {
     "ProgramingLanguages" : { "C++", "C", "Python", "Javascript" },
     "OtherLanguages" : { "HTML", "CSS", "Bash", "Json", "Markdown" },
     "Database" : { "Firebase", "Sqlite", "MongoDB" },
@@ -55,5 +56,3 @@ class About extends Me {
   };
 }
 ```
-
-
