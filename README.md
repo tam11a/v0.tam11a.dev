@@ -1,7 +1,8 @@
 <div align="center" width="50">
 <!-- 
-<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> -->
 <img src="./public/contributions.svg" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
+-->
+<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> 
 
 <p><strong>MERN Stack Developer
 <br> Vibing to : 🎧  </strong></p>
