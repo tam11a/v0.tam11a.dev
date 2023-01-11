@@ -1,26 +1,26 @@
-<div align="center" width="50">
+<!-- <div align="center" width="50"> -->
 <!-- 
 <img src="./public/contributions.svg" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>
 -->
-<img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br> 
+<!-- <img src="./public/dev-working_rounded.gif" href="https://github.com/sp-xd" alt="CoDiNg RocKs"  width="60%"/><br>  -->
 
-<p><strong>MERN Stack Developer
-<br> Vibing to : 🎧  </strong></p>
+<!-- <p><strong>MERN Stack Developer -->
+<!-- <br> Vibing to : 🎧  </strong></p> -->
 
 <!-- ![GitHub followers](https://img.shields.io/github/followers/tam11a?style=social) -->
 <!-- <br> -->
 
-  <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=for-the-badge&label=Views" alt="totalViews" />
+<!--   <img src="https://komarev.com/ghpvc/?username=tam11a&label=Profile%20views&color=0e75b6&style=for-the-badge&label=Views" alt="totalViews" /> -->
 
-</div>
+<!-- </div> -->
 
-<div align="center" style="margin-top: 10px">
+<!-- <div align="center" style="margin-top: 10px"> -->
   <!-- <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
    -->
-  <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p>
- </div>
+<!--   <p><img align="center" src="https://github-readme-stats.vercel.app/api?username=tam11a&show_icons=true&locale=en&layout=compact&theme=transparent" alt="tam11a" /></p> -->
+<!--  </div> -->
 
-<hr></hr>
+<!-- <hr></hr> -->
 <!-- <div align="center">
 
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
