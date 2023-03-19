@@ -40,6 +40,7 @@ const Index = () => {
 					mx: "auto",
 					color: "secondary.contrastText",
 					zIndex: 12,
+					py: 3,
 				}}
 			>
 				<Routes path={"/"}>

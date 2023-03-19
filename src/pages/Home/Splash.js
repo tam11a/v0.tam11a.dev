@@ -5,7 +5,7 @@ import { IconButton, Stack, Typography } from "@mui/material";
 import { VscGithubAlt } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FaWhatsapp } from "react-icons/fa";
-import moment from "moment";
+// import moment from "moment";
 import TerminalContext from "../../context/Terminal";
 
 const Splash = () => {
@@ -25,6 +25,7 @@ const Splash = () => {
 				sx={{
 					fontSize: "1.8rem",
 					"& span": {
+						fontWeight: "bold",
 						color: "primary.main",
 					},
 				}}
@@ -38,24 +39,31 @@ const Splash = () => {
 					color: "#aaa",
 					"& span": {
 						color: "primary.main",
+						fontWeight: "bold",
 					},
 				}}
 			>
-				I'm <span>a Full-Stack Developer</span>. I'm a dedicated hard working
-				team player with experience and excellent knowledge on cutting edge
-				up-to-date web development technologies like <span>React JS</span>,{" "}
-				<span>Next JS</span>, <span>Node JS</span>, <span>Express JS</span>,{" "}
-				<span>Python</span>, <span>MongoDB</span>, <span>MySQL</span> seeking a
-				web developer role for web applications or websites. I will to utilize
-				my{" "}
+				I'm a <span>Full-Stack Engineer</span>. I'm a dedicated, hard-working
+				team player with experience and excellent knowledge of cutting-edge
+				up-to-date web engineering technologies like <span>JavaScript</span>,{" "}
+				<span>TypeScript</span>, <span>Python</span>, <span>C#</span>,{" "}
+				<span>SQL</span>, and <span>NoSQL</span>.
+				{/* I am seeking a software
+				engineer role for web applications or websites. I will utilize my{" "}
 				<span>
 					{moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "years")} years{" "}
-					{moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "months") % 12}{" "}
-					months{" "}
+					{moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "months") % 12 ? (
+						<>
+							and{" "}
+							{moment().diff(moment("21/03/2020", "DD/MM/YYYY"), "months") % 12}{" "}
+							months{" "}
+						</>
+					) : (
+						<></>
+					)}
 				</span>{" "}
-				of experience as <span>Programmer</span> &{" "}
-				<span>Full-Stack Developer</span> and excellent creative skills for
-				achieve its goals.
+				of experience as <span>Full-Stack Engineer</span> and{" "}
+				<span>Excellent Creative</span> skills to achieve its goals. */}
 			</Typography>
 			<Stack direction={"row"}>
 				<IconButton
