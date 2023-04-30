@@ -49,8 +49,13 @@ class About extends Me {
   const myTools = {
     "Language" : ["JavaScript", "TypeScript", "Python", "C++", "C"],
     "Frameworks" : {
+      "Native": {
+        "JavaScript": ["React Native"],
+        "TypeScript": ["React Native"]
+      },
       "Frontend": {
-        "JavaScript": ["ReactJS", "NextJS"]
+        "JavaScript": ["ReactJS", "NextJS"],
+        "TypeScript": ["ReactJS", "NextJS"]
       },
       "Backend": {
         "JavaScript": ["ExpressJS"],
