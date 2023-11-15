@@ -47,22 +47,23 @@
 
 class About extends Me {
   const myTools = {
-    "Language" : ["JavaScript", "TypeScript", "Python", "C++", "C"],
-    "Frameworks" : {
+    "Language": ["JavaScript", "TypeScript", "Python", "C++", "C"],
+    "Frameworks": {
       "Native": {
         "JavaScript": ["React Native"],
         "TypeScript": ["React Native"]
       },
       "Frontend": {
-        "JavaScript": ["ReactJS", "NextJS"],
-        "TypeScript": ["ReactJS", "NextJS"]
+        "TypeScript": ["ReactJS", "NextJS", "VueJS"],
+        "JavaScript": ["ReactJS", "NextJS", "VueJS"]
       },
       "Backend": {
-        "JavaScript": ["ExpressJS"],
+        "TypeScript": ["ExpressJS", "NestJS"],
+        "JavaScript": ["ExpressJS", "NestJS"],
         "Python": ["Flask"]
       }
     },
-    "Database" : {
+    "Database": {
       "Language": {
         "SQL": ["MySQL", "SQLite"],
         "NoSQL": ["MongoDB"]
@@ -72,15 +73,15 @@ class About extends Me {
         "NoSQL": ["Mongoose", "MongoDB", "Firebase"]
       }
     },
-    "APIProtocol": ["REST"],
+    "APIProtocol": ["REST", "GraphQL"],
     "CommunicationProtocol": ["HTTP/HTTPS", "Socket", "MQTT"],
-    "Platforms" : ["GNU/Linux", "Windows"],
-    "Editors" : ["Vscode", "Sublime"],
-    "Additional" : ["HTML", "CSS", "Bash", "JSON", "Markdown"],
+    "Platforms": ["GNU/Linux", "Windows"],
+    "Editors": ["Vscode", "Sublime"],
+    "Additional": ["HTML", "CSS", "Bash", "JSON", "Markdown"],
     "Scrum": ["Jira"],
     "UiUx": ["Figma"],
-    "Git": ["Git Bash", "Github Desktop", "Git Kracken"],
-    "Graphics" : ["Photoshop", "Illustrator"]
+    "Git": ["Git Bash", "GitHub Desktop", "Git Kracken"],
+    "Graphics": ["Photoshop", "Illustrator"]
   };
 }
 ```
